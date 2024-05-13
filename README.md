@@ -59,7 +59,7 @@ docker ps a
 
 ## Migrations
 
-### Rodar os comando de migração e link no container de backend:
+### Rodar os comando de migração:
 
 Entre no container:
 ```
