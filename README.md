@@ -42,10 +42,21 @@ mkdir mysql
 
 Criar uma cópia do arquivo .env.example e renomeá-lo para .env.
 
+```
+cp .env.example .env
+```
+
+## Instalando dependencias
+Ainda no projeto do kanastra-backend execute o comando de instalação de dependencias:
+
+```
+composer install
+```
 
 ## Docker Compose
 
-### Pronto podemos rodar o docker-compose:
+### Pronto podemos rodar o docker-compose
+Vá para o projeto kanastra-docker-compose e execute o comando:
 
 ```
 docker-compose up
@@ -54,7 +65,7 @@ docker-compose up
 ### Visualize os containers em execução:
 
 ```
-docker ps a
+docker ps
 ```
 
 ## Migrations
@@ -63,7 +74,7 @@ docker ps a
 
 Entre no container:
 ```
-docker exec -it <id-do-container> sh
+docker exec -it <id-do-container> bash
 ```
 
 Rodar as migrações:
@@ -83,3 +94,6 @@ php artisan storage:link
 ### Rodar o frontend:
 O frontend não foi conteinerizado, não deu tempo. Portanto, para rodar o frontend basta entrar no projeto de kanastra-frontend e seguir as instruções do README ali contido.
 
+## Testar
+### Pronto agora é só fazer o teste
+Seria só isso se o sistema funcionasse... Ele funcionou quando executado fora do docker, quando eu comecei a passar as coisas para dentro do docker tudo começou a quebrar e infelizmente não tenho mais tempo para resolver os problemas. A idéia geral da solução do problema está contida nos códigos, qualquer dúvida ficarei a disposição para responder, é só me procurar.
